@@ -7,5 +7,6 @@ members = [
     "adder",
     "minigrep",
     "ptr",
-    "concurrency"
+    "concurrency",
+    "state-pattern"
 ]

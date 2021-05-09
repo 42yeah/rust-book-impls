@@ -1,0 +1,11 @@
+[package]
+name = "state-pattern"
+version = "0.1.0"
+authors = ["42yeah <42yeah@gmx.fr>"]
+edition = "2018"
+
+[lib]
+name = "state_pattern"
+path = "src/lib.rs"
+
+[dependencies]
