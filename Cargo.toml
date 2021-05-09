@@ -8,5 +8,7 @@ members = [
     "minigrep",
     "ptr",
     "concurrency",
-    "state-pattern"
+    "state-pattern",
+    "dangerous",
+    "http-server"
 ]
