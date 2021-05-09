@@ -1,4 +1,4 @@
-use std::{sync::{Arc, Mutex}, thread::{self, JoinHandle}};
+use std::{sync::{Arc, Mutex}, thread::{self, JoinHandle}, time::Duration};
 
 fn main() {
     let mutex = Arc::new(Mutex::new(1));
@@ -29,12 +29,13 @@ fn main() {
             match i {
                 0 => {
                     let one_val = m_one.lock().unwrap();
+                    thread::sleep(Duration::from_millis(100));
                     let mut two_val = m_two.lock().unwrap();
                     *two_val += *one_val;
                 },
                 1 => {
-                    let mut one_val = m_one.lock().unwrap();
                     let two_val = m_two.lock().unwrap();
+                    let mut one_val = m_one.lock().unwrap();
                     *one_val += *two_val;
                 },
                 _ => panic!("Unreachable")
